@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.List;
 
 @Controller
-@ResponseBody
+//@ResponseBody
 public class Home {
 
     @RequestMapping("/")
@@ -26,8 +26,8 @@ public class Home {
         p1.setDate(new Date());
 
         Post p2 = new Post();
-        p2.setTitle("Post 1 Title");
-        p2.setBody("Post 1 Body");
+        p2.setTitle("Post 2 Title");
+        p2.setBody("Post 2 Body");
         p2.setDate(new Date());
 
         posts.add(p1);
