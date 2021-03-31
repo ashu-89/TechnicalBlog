@@ -10,9 +10,9 @@ import java.util.List;
 @Service
 public class PostService {
 
-    public List<Post> getAllPosts(){
+    public ArrayList<Post> getAllPosts(){
 
-        List<Post> posts = new ArrayList<>();
+        ArrayList<Post> posts = new ArrayList<>();
 
         Post p1 = new Post();
 
@@ -27,6 +27,21 @@ public class PostService {
 
         posts.add(p1);
         posts.add(p2);
+
+        return posts;
+
+    }
+
+    public ArrayList<Post> getLoggedInPosts() {
+
+        ArrayList<Post> posts = new ArrayList<>();
+
+        Post p1 = new Post();
+
+        p1.setTitle("Logged In Blog Title");
+        p1.setBody("This be premium post available only to registered users");
+        p1.setDate(new Date());
+        posts.add(p1);
 
         return posts;
 

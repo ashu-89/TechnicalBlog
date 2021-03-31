@@ -1,0 +1,20 @@
+<html xmlns:th="http://thymeleaf.org">
+    <head th:fragment = "site-head" >
+
+    </head>
+    <body>
+        <header th:fragment = "logged-out" th:remove="tag">
+            <header>
+                <a href = "/users/login.html" th:href="@{users/login}">Login</a>
+                <a href = "/users/register.html" th:href="@{users/register}">Register</a>
+            </header>
+        </header>
+
+        <header th:fragment = "logged-in" th:remove="tag">
+            <header>
+                <a href = "/users/index.html" th:href="@{/}">Logout</a>
+            </header>
+        </header>
+
+    </body>
+</html>
