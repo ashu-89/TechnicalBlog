@@ -1,8 +1,19 @@
-<html>
-    <head>
-        <title>Register</title>
-    </head>
-    <body>
-        Dummy register
-    </body>
+<html xmlns:th="http://thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Register</title>
+</head>
+<body>
+<h2>This be registration page</h2>
+<div>
+    <form method="post" th:object="${Register}">
+        <label for="name">Name :</label>
+        <input type="text" id="name"></input>
+        <label for="username">Username :</label>
+        <input type="text" id="username"></input>
+        <label for="password">Password :</label>
+        <input type="password" id="password"></input>
+        <input type="submit" value="register"></input>
+    </form>
+</div>
+</body>
 </html>

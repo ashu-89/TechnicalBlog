@@ -33,4 +33,10 @@ public class UserController {
     public String loginUser(User user){
         return "redirect:/posts";
     }
+
+    @RequestMapping(value="/users/register", method = RequestMethod.POST)
+    public String registerUser(User user){
+        return "redirect:/";
+    }
+
 }
